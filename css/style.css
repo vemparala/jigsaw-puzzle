@@ -1,0 +1,79 @@
+#jigsaw hr{
+    border:none;
+    border-top:2px solid #f5f2f2;
+    height:1px;
+}
+
+#jigsaw #playPanel {
+    padding: 10px 0px;
+    margin: 10px auto;
+    max-width: 1100px;
+    width:95%;
+}
+
+#jigsaw #actualImageBox {
+    display: inline-block;
+    font-size:0.8em;
+    margin: 10px 10px;
+    vertical-align: top;
+    width:500px;
+}
+
+#jigsaw #stepBox, #jigsaw #timeBox {
+    display:inline-block;
+    width:48%;
+}
+
+#jigsaw #stepBox div {
+    background-color:#c2defc;
+    display:inline-block;
+    padding:1px 4px;
+    margin: 0px auto;
+    max-width:800px;
+}
+
+#jigsaw img#actualImage{
+    border:2px solid #a46;
+    height:500px;
+    width:500px;
+}
+
+#jigsaw #sortable {
+    border:2px solid #a46;
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px;
+    padding: 0;
+    width: 500px;
+}
+
+    #jigsaw #sortable li {
+        background-size: 400% 400%;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        float: left;
+        width: 100px;
+        height: 100px;
+    }
+
+#jigsaw button  {
+    background-color: #ffa500;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#jigsaw #playPanel div {
+    display: inline-block !important;
+}
+#jigsaw #playPanel div label {
+    display: block !important;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Jigsaw Puzzle</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/jigsaw-puzzle.css" rel="stylesheet" />
+    <script src="js/jigsaw-puzzle.js"></script>
+</head>
+
+<body>
+    <div id="jigsaw">
+        <h2>Jigsaw Puzzle</h2>
+        <hr />
+        <div id="playPanel">
+            <div>
+                <label><b>Number of rows</b></label>
+                <input type="number" id="nOfRows" maxlength="2" />
+            </div>
+            <div>
+                <label><b>Number of cols</b></label>
+                <input type="number" id="nOfCols" maxlength="2" />
+            </div>
+            <div>
+                <label><b>Picture URL</b></label>
+                <input type="text" id="pictureUrl"  size="50"/>
+            </div>
+            <div>
+                <button onclick="updatePuzzle()">Update</button>
+            </div>
+            <div id="puzzleBox" style="display:none !important">
+                <ul id="sortable" class="sortable"></ul>
+                <div id="actualImageBox">
+                    <div id="timeBox">
+                        Count Down: <span id="timerPanel"></span> secs
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            // https://s3-eu-west-1.amazonaws.com/wagawin-ad-platform/media/testmode/banner-landscape.jpg
+
+            function updatePuzzle() {
+                var nOfRows = document.getElementById("nOfRows").value;
+                var nOfCols = document.getElementById("nOfCols").value;
+                var pictureUrl = document.getElementById("pictureUrl").value;
+
+                if (nOfRows == null || nOfRows == "", nOfCols == null || nOfCols == "", pictureUrl == null || pictureUrl == "") {
+                    alert("Please Fill All Required Field");
+                    return false;
+                }
+
+                jigsawPuzzle.startPuzzle(pictureUrl, nOfRows, nOfCols);
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
